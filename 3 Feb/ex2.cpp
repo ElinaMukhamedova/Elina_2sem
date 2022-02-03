@@ -24,7 +24,7 @@ int main() {
             double sD = std::sqrt(D);
             double x1 = (-b - sD) / (2 * a);
             double x2 = (-b + sD) / (2 * a);
-            std::cout << x1 << x2 << std::endl;
+            std::cout << x1 << " " << x2 << std::endl;
             }
     return 0;
 }

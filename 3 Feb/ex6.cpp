@@ -6,7 +6,6 @@
 //
 
 #include <iostream>
-#include <string>
 #include <cmath>
 
 int gcd(int a, int b) {
