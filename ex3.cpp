@@ -17,7 +17,7 @@ int main() {
         ans *= n;
         n -= 1;
     }
-    std::cout << ans << std::endl;
+    std::cout << ans << '\n';
     return 0;
 }
 
