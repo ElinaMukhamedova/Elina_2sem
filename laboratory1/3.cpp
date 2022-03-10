@@ -9,7 +9,7 @@
 #include <iostream>
 #include <fstream>
 
-const int dim = 15;
+const int dim = 17;
 
 bool reach_border(int x, int y) {
     if (x == 0 || y == 0 || x == dim - 1 || y == dim - 1)
@@ -87,14 +87,14 @@ int main(int argc, char* argv[]) {
                 if (counter > 0) {
                     for (int i = 1; i < dim - 1; i ++) {
                         for (int j = 1; j < dim - 1; j ++) {
-                            if ((mirror[i][j] == 3 && mirror[i + 1][j + 1] == 2) || (mirror[i][j] == 4 && mirror[i + 1][j - 1] == 3)){
+                            if ((mirror[i][j] == 3 && mirror[i + 1][j + 1] == 2) || (mirror[i][j + 1] == 4 && mirror[i + 1][j] == 3)){
                                 lattice[i][j] = 0;
                                 lattice[i][j + 1] = 1;
                                 lattice[i + 1][j] = 0;
                                 lattice[i + 1][j + 1] = 1;
                             }
                             else {
-                                if ((mirror[i][j] == 4 && mirror[i + 1][j + 1] == 1) || (mirror[i][j] == 1 && mirror[i + 1][j - 1] == 2)){
+                                if ((mirror[i][j] == 4 && mirror[i + 1][j + 1] == 1) || (mirror[i][j + 1] == 1 && mirror[i + 1][j] == 2)){
                                     lattice[i][j] = 1;
                                     lattice[i][j + 1] = 0;
                                     lattice[i + 1][j] = 1;
