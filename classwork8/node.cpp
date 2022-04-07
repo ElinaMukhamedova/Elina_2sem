@@ -121,6 +121,12 @@ int main() {
     delete_by_value(&list, d);
     print_list(&list);
     
+    std::cout << "Add value to index: ";
+    int q = 0, ind = -1;
+    std::cin >> q >> ind;
+    add(&list, q, ind);
+    print_list(&list);
+    
     std::cout << "Delete all nodes" << std::endl;
     delete_list(&list);
     print_list(&list);
